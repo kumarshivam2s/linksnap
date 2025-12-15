@@ -1,4 +1,5 @@
 # 🔗 LinkSnap - URL Shortener
+Live Link `https://linksnap-eight.vercel.app/`
 
 A full-stack URL shortener with click analytics built with the MERN stack.
 
