@@ -1,45 +1,86 @@
-# 🔗 LinkSnap - URL Shortener
+# LinkSnap
 
-A full-stack URL shortener with click analytics built with the MERN stack.
+A URL shortener with click tracking built with React, Node.js, Express, and MongoDB.
 
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
-![Express](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+## Features
 
-## ✨ Features
+- Shorten long URLs
+- Track click analytics with 7-day chart
+- Search and filter links
+- View stats overview (total links, clicks, averages)
+- Copy links to clipboard
+- Delete links
 
-- ✂️ Shorten long URLs instantly
-- 📊 Track click analytics
-- 📈 View 7-day click history chart
-- 📋 One-click copy to clipboard
-- 🗑️ Delete unwanted links
-- 🌙 Beautiful dark theme UI
+## Tech Stack
 
-## 🛠️ Tech Stack
+**Frontend:** React, Tailwind CSS, Chart.js, Vite  
+**Backend:** Node.js, Express, MongoDB
 
-**Frontend:**
-- React
-- Tailwind CSS
-- Chart.js
-- Vite
-
-**Backend:**
-- Node.js
-- Express
-- MongoDB
-- Mongoose
-
-## 📦 Installation
+## Setup
 
 ### Prerequisites
 
-- Node.js (v16 or higher)
-- MongoDB Atlas account or local MongoDB
+- Node.js v16+
+- MongoDB (local or Atlas)
 
-### Clone the repository
+### Installation
 
 ```bash
 git clone https://github.com/kumarshivam2s/linksnap.git
 cd linksnap
+```
+
+**Server:**
+```bash
+cd server
+npm install
+```
+
+Create `.env` file in server folder:
+```
+MONGO_URI=your_mongodb_connection_string
+PORT=5000
+```
+
+**Client:**
+```bash
+cd client
+npm install
+```
+
+### Run
+
+Start the server:
+```bash
+cd server
+node server.js
+```
+
+Start the client:
+```bash
+cd client
+npm run dev
+```
+
+Open http://localhost:5173
+
+## Project Structure
+
+```
+linksnap/
+├── client/          # React frontend
+│   ├── src/
+│   │   ├── components/
+│   │   └── App.jsx
+│   └── package.json
+├── server/          # Express backend
+│   ├── models/
+│   ├── routes/
+│   ├── server.js
+│   └── package.json
+└── README.md
+```
+
+## License
+
+MIT
