@@ -1,86 +1,116 @@
 # LinkSnap
 
-A URL shortener with click tracking built with React, Node.js, Express, and MongoDB.
+LinkSnap is a full-stack URL shortener with click tracking built using React, Node.js, Express, and MongoDB. It allows users to create short links, monitor analytics, and manage URLs through a clean dashboard interface.
+
+---
 
 ## Features
 
-- Shorten long URLs
-- Track click analytics with 7-day chart
-- Search and filter links
-- View stats overview (total links, clicks, averages)
-- Copy links to clipboard
-- Delete links
+- Generate short URLs instantly  
+- Track click analytics with 7‑day chart visualization  
+- Search and filter saved links  
+- View overall statistics (total links, total clicks, averages)  
+- Copy shortened links to clipboard  
+- Delete links when needed  
+
+---
 
 ## Tech Stack
 
-**Frontend:** React, Tailwind CSS, Chart.js, Vite  
-**Backend:** Node.js, Express, MongoDB
+Frontend  
+- React  
+- Tailwind CSS  
+- Chart.js  
+- Vite  
 
-## Setup
+Backend  
+- Node.js  
+- Express  
+- MongoDB  
+
+---
+
+## Getting Started
 
 ### Prerequisites
 
-- Node.js v16+
-- MongoDB (local or Atlas)
+- Node.js v16 or higher  
+- MongoDB (local installation or MongoDB Atlas)
 
-### Installation
+---
+
+## Installation
+
+Clone the repository:
 
 ```bash
 git clone https://github.com/kumarshivam2s/linksnap.git
 cd linksnap
 ```
 
-**Server:**
+### Setup Backend
+
 ```bash
 cd server
 npm install
 ```
 
-Create `.env` file in server folder:
+Create a `.env` file inside the `server` folder:
+
 ```
 MONGO_URI=your_mongodb_connection_string
 PORT=5000
 ```
 
-**Client:**
+### Setup Frontend
+
 ```bash
-cd client
+cd ../client
 npm install
 ```
 
-### Run
+---
 
-Start the server:
+## Running the Application
+
+Start backend:
+
 ```bash
-cd server
+cd ../server
 node server.js
 ```
 
-Start the client:
+Start frontend:
+
 ```bash
-cd client
+cd ../client
 npm run dev
 ```
 
-Open http://localhost:5173
+Open:
+
+```
+http://localhost:5173
+```
+
+---
 
 ## Project Structure
 
 ```
 linksnap/
-├── client/          # React frontend
+├── client/          React frontend
 │   ├── src/
-│   │   ├── components/
-│   │   └── App.jsx
 │   └── package.json
-├── server/          # Express backend
+├── server/          Express backend
 │   ├── models/
 │   ├── routes/
-│   ├── server.js
-│   └── package.json
+│   └── server.js
 └── README.md
 ```
 
+---
+
 ## License
 
-MIT
+MIT License
