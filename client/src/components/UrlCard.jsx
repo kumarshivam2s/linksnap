@@ -6,7 +6,7 @@ function UrlCard({ url, onDelete }) {
   const [showChart, setShowChart] = useState(false);
   const [confirmDelete, setConfirmDelete] = useState(false);
 
-  const shortUrl = `http://localhost:5000/api/url/${url.shortCode}`;
+  const shortUrl = `${import.meta.env.VITE_API_URL}/api/url/${url.shortCode}`;
 
   const copyToClipboard = async () => {
     try {
@@ -26,7 +26,7 @@ function UrlCard({ url, onDelete }) {
     }
 
     try {
-      await fetch(`http://localhost:5000/api/url/${url.shortCode}`, {
+      await fetch(`${import.meta.env.VITE_API_URL}/api/url/${url.shortCode}`, {
         method: "DELETE",
       });
       onDelete();
@@ -55,10 +55,15 @@ function UrlCard({ url, onDelete }) {
           >
             {url.shortCode}
           </a>
-          <p className="text-gray-500 text-sm truncate mt-1" title={url.originalUrl}>
+          <p
+            className="text-gray-500 text-sm truncate mt-1"
+            title={url.originalUrl}
+          >
             {url.originalUrl}
           </p>
-          <p className="text-gray-600 text-xs mt-2">{formatDate(url.createdAt)}</p>
+          <p className="text-gray-600 text-xs mt-2">
+            {formatDate(url.createdAt)}
+          </p>
         </div>
 
         <div className="text-right">

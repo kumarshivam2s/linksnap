@@ -17,11 +17,14 @@ function UrlForm({ onUrlAdded }) {
     setLoading(true);
 
     try {
-      const response = await fetch("http://localhost:5000/api/url/shorten", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ originalUrl: url }),
-      });
+      const response = await fetch(
+        `${import.meta.env.VITE_API_URL}/api/url/shorten`,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ originalUrl: url }),
+        },
+      );
 
       if (!response.ok) throw new Error("Failed to shorten URL");
 
